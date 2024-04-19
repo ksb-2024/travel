@@ -23,6 +23,11 @@ public class BoardService {
 	public BoardService(BoardRepository boardRepository) {
 		this.boardRepository = boardRepository;
 	}
+	
+	// 최신 게시글 목록 조회
+	public List<Board> getBoardListDesc(){
+		return boardRepository.findAllByOrderByBnoDesc();
+	}
 
 	// 여행후기 게시글 목록 조회
 	public Page<Board> getBoards(int page, int size){

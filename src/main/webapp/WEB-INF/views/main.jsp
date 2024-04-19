@@ -66,7 +66,7 @@
 			<!-- 가로 슬라이드 : https://junhee6773.tistory.com/19 참고 -->
 			<div id="main_pictures">
 				<div>
-					<a href="http://localhost:8080/travel/busan.jsp">
+					<a href="/travel/busan">
 					<img src="images/busan.png" alt="부산"></a>
 					<div>
 						<i class="fa-solid fa-location-dot"></i>
@@ -74,7 +74,7 @@
 			  		</div>
 			  	</div>
 				<div>
-					<a href="http://localhost:8080/travel/seoul.jsp">
+					<a href="/travel/seoul">
 					<img src="images/seoul.png" alt="서울"></a>
 			  		<div>
 						<i class="fa-solid fa-location-dot"></i>
@@ -82,7 +82,7 @@
 			  		</div>
 			  	</div>
 				<div>
-					<a href="http://localhost:8080/travel/jeju.jsp">
+					<a href="/travel/jeju">
 					<img src="images/jeju.png" alt="제주"></a>
 			  		<div>
 						<i class="fa-solid fa-location-dot"></i>
@@ -90,7 +90,7 @@
 			  		</div>
 			  	</div>
 				<div>
-					<a href="http://localhost:8080/travel/switzerland.jsp">
+					<a href="/travel/switzerland">
 					<img src="images/switzerland.png" alt="스위스"></a>
 			  		<div>
 						<i class="fa-solid fa-location-dot"></i>
@@ -98,7 +98,7 @@
 			  		</div>
 			  	</div>
 				<div>
-					<a href="http://localhost:8080/travel/australia.jsp">
+					<a href="/travel/australia">
 					<img src="images/australia.png" alt="호주"></a>
 			  		<div>
 						<i class="fa-solid fa-location-dot"></i>
@@ -106,7 +106,7 @@
 			  		</div>
 			  	</div>
 				<div>
-					<a href="http://localhost:8080/travel/japan.jsp">
+					<a href="/travel/japan">
 					<img src="images/japan.png" alt="일본"></a>
 			  		<div>
 						<i class="fa-solid fa-location-dot"></i>

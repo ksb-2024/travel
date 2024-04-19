@@ -2,6 +2,7 @@ package travel.travelspring.controller;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -94,8 +95,144 @@ public class MainController {
 	@GetMapping("/main.do")
 	public String mainpage(Model model) {
 		
+		// 환율 정보
 		List<String> rateList = rateService.getRateList();
 		model.addAttribute("rateList", rateList);
+		
+		// 여행 후기 인기글 리스트 조회
+		List<Board> likeList00 = boardService.getBoardLikeList();
+		List<Board> likeList = new ArrayList<>();
+		if(likeList00 != null && likeList00.size() != 0) {
+			if(likeList00.size() >= 3) {
+				likeList.add(likeList00.get(0));
+				likeList.add(likeList00.get(1));
+				likeList.add(likeList00.get(2));
+				
+				model.addAttribute("likeList", likeList);
+			}else if (likeList00.size() == 2) {
+				likeList.add(likeList00.get(0));
+				likeList.add(likeList00.get(1));
+				
+				model.addAttribute("likeList", likeList);
+			}else if (likeList00.size() == 1) {
+				likeList.add(likeList00.get(0));
+				
+				model.addAttribute("likeList", likeList);
+			}
+		}
+		
+		// 여행 후기 최신글 리스트 조회
+		List<Board> boardList00 = boardService.getBoardListDesc();
+		List<Board> boardList = new ArrayList<>();
+		if(boardList00 != null && boardList00.size() != 0) {
+			if(boardList00.size() >= 3) {
+				boardList.add(boardList00.get(0));
+				boardList.add(boardList00.get(1));
+				boardList.add(boardList00.get(2));
+				
+				model.addAttribute("boardList", boardList);
+			}else if (boardList00.size() == 2) {
+				boardList.add(boardList00.get(0));
+				boardList.add(boardList00.get(1));
+				
+				model.addAttribute("boardList", boardList);
+			}else if (boardList00.size() == 1) {
+				boardList.add(boardList00.get(0));
+				
+				model.addAttribute("boardList", boardList);
+			}
+		}
+		
+		// 동행자 찾기 인기글 리스트 조회
+		List<Board1> likeList01 = board1Service.getBoardLikeList();
+		List<Board1> likeList1 = new ArrayList<>();
+		if(likeList01 != null && likeList01.size() != 0) {
+			if(likeList01.size() >= 3) {
+				likeList1.add(likeList01.get(0));
+				likeList1.add(likeList01.get(1));
+				likeList1.add(likeList01.get(2));
+				
+				model.addAttribute("likeList1", likeList1);
+			}else if (likeList01.size() == 2) {
+				likeList1.add(likeList01.get(0));
+				likeList1.add(likeList01.get(1));
+				
+				model.addAttribute("likeList1", likeList1);
+			}else if (likeList01.size() == 1) {
+				likeList1.add(likeList01.get(0));
+				
+				model.addAttribute("likeList1", likeList1);
+			}
+		}
+		
+		// 동행자 찾기 최신글 리스트 조회
+		List<Board1> boardList01 = board1Service.getBoardListDesc();
+		List<Board1> boardList1 = new ArrayList<>();
+		if(boardList01 != null && boardList01.size() != 0) {
+			if(boardList01.size() >= 3) {
+				boardList1.add(boardList01.get(0));
+				boardList1.add(boardList01.get(1));
+				boardList1.add(boardList01.get(2));
+				
+				model.addAttribute("boardList1", boardList1);
+			}else if (boardList01.size() == 2) {
+				boardList1.add(boardList01.get(0));
+				boardList1.add(boardList01.get(1));
+				
+				model.addAttribute("boardList1", boardList1);
+			}else if (boardList01.size() == 1) {
+				boardList1.add(boardList01.get(0));
+				
+				model.addAttribute("boardList1", boardList1);
+			}
+		}
+		
+		// 동행자 찾기 인기글 리스트 조회
+		List<Board2> likeList02 = board2Service.getBoardLikeList();
+		List<Board2> likeList2 = new ArrayList<>();
+		if(likeList02 != null && likeList02.size() != 0) {
+			if(likeList02.size() >= 3) {
+				likeList2.add(likeList02.get(0));
+				likeList2.add(likeList02.get(1));
+				likeList2.add(likeList02.get(2));
+				
+				model.addAttribute("likeList2", likeList2);
+			}else if (likeList02.size() == 2) {
+				likeList2.add(likeList02.get(0));
+				likeList2.add(likeList02.get(1));
+				
+				model.addAttribute("likeList2", likeList2);
+			}else if (likeList02.size() == 1) {
+				likeList2.add(likeList02.get(0));
+				
+				model.addAttribute("likeList2", likeList2);
+			}
+		}
+		
+		// 동행자 찾기 최신글 리스트 조회
+		List<Board2> boardList02 = board2Service.getBoardListDesc();
+		List<Board2> boardList2 = new ArrayList<>();
+		if(boardList02 != null && boardList02.size() != 0) {
+			if(boardList02.size() >= 3) {
+				boardList2.add(boardList02.get(0));
+				boardList2.add(boardList02.get(1));
+				boardList2.add(boardList02.get(2));
+				
+				model.addAttribute("boardList2", boardList2);
+			}else if (boardList02.size() == 2) {
+				boardList2.add(boardList02.get(0));
+				boardList2.add(boardList02.get(1));
+				
+				model.addAttribute("boardList2", boardList2);
+			}else if (boardList02.size() == 1) {
+				boardList2.add(boardList02.get(0));
+				
+				model.addAttribute("boardList2", boardList2);
+			}
+		}
+		
+		
+		
 		return "main";
 	}
 	

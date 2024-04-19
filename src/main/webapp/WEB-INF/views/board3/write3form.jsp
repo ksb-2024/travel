@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>글쓰기 폼</title>
+<title>Q&A - 여정담</title>
 <link rel="stylesheet" href="../css/style.css">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="../js/main.js"></script>
@@ -22,7 +22,7 @@
 		<section id="notice">
 		    <div class="board-title">
 		        <div class="board2">
-		            <h3>여행 후기</h3>
+		            <h3>Q&A</h3>
 		            <p>인터넷은 우리가 만들어가는 소중한 공간입니다.</p>
 		        </div>
 		    </div>

@@ -24,6 +24,11 @@ public class Board1Service {
 	public Board1Service(Board1Repository board1Repository) {
 		this.board1Repository = board1Repository;
 	}
+	
+	// 최신 게시글 목록 조회
+	public List<Board1> getBoardListDesc(){
+		return board1Repository.findAllByOrderByBno1Desc();
+	}
 
 	// 동행자찾기 게시글 목록 조회
 	public Page<Board1> getBoards(int page, int size){

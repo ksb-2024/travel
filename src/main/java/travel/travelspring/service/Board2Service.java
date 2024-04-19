@@ -11,6 +11,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import travel.travelspring.domain.Board;
 import travel.travelspring.domain.Board1;
 import travel.travelspring.domain.Board2;
 import travel.travelspring.repository.Board2Repository;
@@ -23,6 +24,11 @@ public class Board2Service {
 	
 	public Board2Service(Board2Repository board2Repository) {
 		this.board2Repository = board2Repository;
+	}
+	
+	// 최신 게시글 목록 조회
+	public List<Board2> getBoardListDesc(){
+		return board2Repository.findAllByOrderByBno2Desc();
 	}
 
 	// 나의계획 게시글 목록 조회

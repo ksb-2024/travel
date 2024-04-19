@@ -22,7 +22,7 @@
 		<section id="notice">
 		    <div class="board-title">
 		        <div class="board2">
-		            <h3>여행 후기</h3>
+		            <h3>나의 계획</h3>
 		            <p>인터넷은 우리가 만들어가는 소중한 공간입니다.</p>
 		        </div>
 		    </div>
